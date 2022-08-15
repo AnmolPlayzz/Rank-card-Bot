@@ -24,12 +24,8 @@ class MyClient(discord.Client):
                     det_co =[(t - f) / interval for f , t in zip(f_co, t_co)]
                     for i in range(interval):
                         yield [round(f + det * i) for f, det in zip(f_co, det_co)]
-                gradient = Image.new('RGBA', img.size, color=0)
+                gradient = Image.open('gradient.png', 'r')
                 draw1 = ImageDraw.Draw(gradient)
-                f_co = (237, 28, 36)
-                t_co = (243, 117, 71)
-                for i, color in enumerate(interpolate(f_co, t_co, img.width*2)):
-                    draw1.line([(i, 0), (0, i)], tuple(color), width=1)
                 gradient=gradient.resize((bar,16), Image.Resampling.LANCZOS)
                 def create_rounded_rectangle_mask(size, radius, alpha=255):
                     factor = 5 
@@ -69,4 +65,4 @@ class MyClient(discord.Client):
                 embed.set_image(url='attachment://image.png')
                 await message.channel.send(file=discord.File(fp=image_binary, filename='image.png'), embed=embed)
 client = MyClient()
-client.run('') #Add your token first owo
+client.run('MTAwODMxMTUzOTc2NzQ1OTg4MQ.Gx98Gd.J86u0zZ1tf49DWKKXNWnyhFSp1eHjOWxyztExQ') #Add your token first owo
