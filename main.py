@@ -17,9 +17,9 @@ class MyClient(discord.Client):
                 bar=int(((exp*100)//next_exp)*4.65)
                 text="Rank: "+str(rank)+"  "+"Level: "+str(level)
                 text2=str(exp)+"/"+str(next_exp)
-                font1 = ImageFont.truetype('font\Roboto-Black.ttf', 24) #User Name font
-                font2 = ImageFont.truetype('font\Roboto-Light.ttf', 17) #Rank Level font
-                font3 = ImageFont.truetype('font\Roboto-Medium.ttf', 15) #Exp font
+                font1 = ImageFont.truetype(r'font/Roboto-Black.ttf', 24) #User Name font
+                font2 = ImageFont.truetype(r'font/Roboto-Light.ttf', 17) #Rank Level font
+                font3 = ImageFont.truetype(r'font/Roboto-Medium.ttf', 15) #Exp font
                 def interpolate(f_co, t_co, interval):
                     det_co =[(t - f) / interval for f , t in zip(f_co, t_co)]
                     for i in range(interval):
