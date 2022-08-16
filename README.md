@@ -10,6 +10,26 @@
 |Name |Description|Type|
 |-|-|-|
 |`user`|A discord User |class|
+|`level`|The current level of the user|integer|
+|`rank`|Rank of user|integer|
+|`exp`|The current xp of the user|integer|
+|`next_exp`|The xp required to level up|integer|
+
+_Some varieables have to be linked to a database_
+
+<h2>Passing values to the functions</h2>
+
+You should find a function named `create_image`
+
+Pass the varieables in the order:
+
+```py
+create_image(user, rank, level, exp, next_exp)
+```
+
+<h2>Output</h2>
+You should get the following output:
+<img src="https://cdn.discordapp.com/attachments/999631045462859846/1009051097127735386/unknown.png">
 
 ---
-UNDER CONSTRUCTION
+Made with python and ♥ by @AnmolPlayzz

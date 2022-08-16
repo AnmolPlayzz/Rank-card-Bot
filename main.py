@@ -65,4 +65,4 @@ class MyClient(discord.Client):
                 embed.set_image(url='attachment://image.png')
                 await message.channel.send(file=discord.File(fp=image_binary, filename='image.png'), embed=embed)
 client = MyClient()
-client.run('MTAwODMxMTUzOTc2NzQ1OTg4MQ.Gx98Gd.J86u0zZ1tf49DWKKXNWnyhFSp1eHjOWxyztExQ') #Add your token first owo
+client.run('') #Add your token first owo
